@@ -14,7 +14,6 @@ export default function createElement(type, props, ...children) {
 
     return {
         type,
-        props: props || {},
-        children: _children
+        props: {...(props || {}), children: _children}
     }
 }
